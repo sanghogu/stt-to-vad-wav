@@ -1,0 +1,71 @@
+.reactIcon {
+    &:hover {
+        color: #4099FF;
+    }
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.audioRecorder {
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0px 2px 5px 0px rgb(190, 190, 190);
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    padding: 12px 12px;
+    transition: all 0.2s ease-in;
+}
+
+.audioRecorderTimer, .audioRecorderStatus {
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.audioRecorderStatus {
+    margin: 0 15px;
+    display: flex;
+    align-items: baseline;
+    flex-grow: 1;
+    animation-name: fading-ar-status;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    .waitText {
+        margin-left: 5px;
+    }
+}
+
+.audioRecorderStatusDot {
+    background-color: rgb(221, 0, 0);
+    border-radius: 50%;
+    height: 10px;
+    width: 9px;
+    margin-right: 5px;
+}
+
+.audioRecorderOptions {
+    height: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.recording {
+    border-radius: 12px;
+    transition: all 0.2s ease-out;
+}
+
+.displayNone {
+    display: none;
+}
+
+@keyframes fading-ar-status {
+    0%   {opacity: 1;}
+    50%  {opacity: 0;}
+    100% {opacity: 1;}
+}
